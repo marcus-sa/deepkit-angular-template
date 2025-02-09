@@ -1,0 +1,2 @@
+[test]
+preload = ["@deepkit/bun", "./test/setup.ts"]

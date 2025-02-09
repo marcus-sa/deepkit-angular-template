@@ -1,0 +1,13 @@
+diff --git a/es/index.js b/es/index.js
+index fe7983709a654ddd86122f921778e8903709ba9d..e52c95012a6480bdb8b11d5050492ac0e1f4525e 100644
+--- a/es/index.js
++++ b/es/index.js
+@@ -41,7 +41,7 @@ function loadPages(Jimp, dir, pages) {
+   });
+   return Promise.all(newPages);
+ }
+-const dir = process.env.DIRNAME || `${__dirname}/../`;
++const dir = process.env.DIRNAME || `${import.meta.dirname}/../`;
+ export default (() => ({
+   constants: {
+     measureText,

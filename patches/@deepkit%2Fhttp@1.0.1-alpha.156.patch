@@ -1,0 +1,13 @@
+diff --git a/dist/esm/src/kernel.js b/dist/esm/src/kernel.js
+index d6e59a16e7e355ffd972c25b60280447c3f2d957..bc4908362c04205583fd5b771b262fb80489afe3 100644
+--- a/dist/esm/src/kernel.js
++++ b/dist/esm/src/kernel.js
+@@ -60,7 +60,7 @@ export class HttpKernel {
+             this.logger.error('HTTP kernel request failed', error);
+         }
+         finally {
+-            for (const file of Object.values(req.uploadedFiles)) {
++            for (const file of Object.values(req.uploadedFiles || [])) {
+                 unlink(file.path, () => {
+                 });
+             }
